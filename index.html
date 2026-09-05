@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Pack Profesional de Limpieza de Tapicerías | Manuales JARBO</title>
+<meta name="description" content="Aprende el oficio profesional de limpieza de tapicerías desde cero, con criterio técnico: equipos, telas, química, procesos y seguridad, paso a paso.">
+<!-- FAVICON: reemplaza "favicon.png" por la ruta o URL de tu logo/ícono (ideal 512x512px, fondo transparente o sólido) -->
+<link rel="icon" type="image/png" href="fotos/fotosfavicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>#hero-boton{
+    display:flex;
+    margin:0 auto;
+    width:fit-content;
+}
+/* ===================================================================
+   SISTEMA VISUAL — variables de diseño. Si algún día quieres cambiar
+   un color o una fuente en TODA la página, hazlo aquí, una sola vez.
+   Paleta pensada para transmitir "limpieza profesional": blancos,
+   grises muy claros y un azul-verdoso (teal) como único acento.
+   =================================================================== */
+:root{
+  --blanco:#FFFFFF;
+  --gris-claro:#F3F6F7;
+  --gris-medio:#E4EAEC;
+  --oscuro:#0E2A32;      /* texto principal, casi negro azulado */
+  --gris-texto:#516670;  /* texto secundario */
+  --teal:#0C8C8C;        /* único acento: botones, checks, precio, CTA */
+  --teal-oscuro:#075E5E;
+  --teal-suave:rgba(12,140,140,.08);
+  --rojo:#C0392B;        /* solo para urgencia o precio anterior */
+  --borde:rgba(14,42,50,0.10);
+  --radius:20px;
+  --ease:cubic-bezier(.22,.9,.32,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--blanco);color:var(--oscuro);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+.display{font-family:'Bebas Neue',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;margin:0;font-weight:400;color:var(--oscuro);}
+p{margin:0;}
+.container{max-width:980px;margin:0 auto;padding:0 1.25rem;}
+section{padding:3.6rem 0;}
+@media(min-width:768px){section{padding:5.5rem 0;}}
+.texto-sec{color:var(--gris-texto);font-size:1.02rem;line-height:1.65;max-width:560px;}
+.centro{text-align:center;margin-left:auto;margin-right:auto;}
+.teal{color:var(--teal);}
+.rojo{color:var(--rojo);}
+
+/* tarjeta — reutilizada en toda la página */
+.glass{background:var(--blanco);border:1px solid var(--borde);border-radius:var(--radius);box-shadow:0 16px 40px -26px rgba(14,42,50,.28);}
+
+/* botón CTA — el link real se inyecta desde ENLACES.hotmart */
+.btn{font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;border:none;cursor:pointer;border-radius:14px;padding:1.05rem 1.9rem;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;transition:transform .3s var(--ease), filter .3s var(--ease);text-decoration:none;}
+.btn-cta{background:var(--teal);color:#FFFFFF;box-shadow:0 12px 30px -12px rgba(12,140,140,.55);}
+.btn-cta:hover{transform:scale(1.025);filter:brightness(1.07);}
+.btn-cta:active{transform:scale(.98);}
+.btn-block{width:100%;}
+
+/* aparición al hacer scroll */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease), transform .7s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* nota de transferencia — aparece igual en 3 secciones, viene de un solo texto */
+.nota-transferencia{margin-top:1.4rem;padding:1rem 1.2rem;border-radius:14px;border:1px solid var(--borde);background:var(--gris-claro);color:var(--gris-texto);font-size:.85rem;line-height:1.55;max-width:520px;}
+.nota-transferencia b{color:var(--oscuro);}
+
+/* ---------- HERO ---------- */
+.hero-wrap{position:relative;background:linear-gradient(180deg,#EAF6F6 0%,#FFFFFF 78%);overflow:hidden;}
+.hero{padding-top:1.2rem;padding-bottom:2.2rem;text-align:center;position:relative;z-index:2;}
+.hero .display{font-size:2.3rem;max-width:740px;margin:1.4rem auto 1rem;}
+@media(min-width:768px){.hero .display{font-size:3.9rem;}}
+.hero .sub{margin:0 auto 1.6rem;max-width:560px;color:var(--gris-texto);font-size:1.02rem;line-height:1.6;}
+
+/* ---------- BANNER DE OFERTA (arriba de toda la página) ---------- */
+.banner-promo{
+  width:100%;
+  background:linear-gradient(90deg,#14b814 0%,#1fd01f 50%,#12b312 100%);
+  color:#fff;
+  text-shadow:
+  0 1px 1px rgba(0,0,0,.35),
+  0 2px 8px rgba(0,0,0,.25);
+  text-align:center;
+  padding:.7rem 1rem;
+  font-weight:700;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Flamas */
+.banner-promo::before,
+.banner-promo::after{
+  content:"🔥";
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:22px;
+  animation:fuego 1.8s ease-in-out infinite;
+}
+
+.banner-promo::before{ left:18px; }
+.banner-promo::after{
+  right:18px;
+  animation-delay:.9s;
+}
+
+@keyframes fuego{
+  0%,100%{
+    transform:translateY(-50%) scale(1);
+    filter:drop-shadow(0 0 0px #ffae00);
+  }
+  50%{
+    transform:translateY(-58%) scale(1.18);
+    filter:drop-shadow(0 0 8px #ff9800);
+  }
+}
+.banner-promo .icono-burbuja{width:16px;height:16px;flex-shrink:0;position:relative;}
+.banner-promo .icono-burbuja::before,.banner-promo .icono-burbuja::after{
+  content:'';position:absolute;border-radius:50%;border:1.6px solid #fff;
+}
+.banner-promo .icono-burbuja::before{width:16px;height:16px;top:0;left:0;}
+.banner-promo .icono-burbuja::after{width:6px;height:6px;background:#fff;top:-3px;right:-4px;}
+.banner-promo strong{font-weight:800;}
+.banner-promo .brillo{position:absolute;top:0;left:-30%;width:22%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);animation:brillar 4.5s ease-in-out infinite;}
+@keyframes brillar{0%{left:-30%;}55%{left:120%;}100%{left:120%;}}
+@media(prefers-reduced-motion:reduce){.banner-promo .brillo{display:none;}}
+@media(max-width:480px){.banner-promo{font-size:.72rem;padding:.6rem .8rem;}}
+
+/* burbujas decorativas del hero — puro detalle visual, sin contenido */
+.burbuja{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%, rgba(12,140,140,.22), rgba(12,140,140,.04) 70%);pointer-events:none;z-index:1;}
+.burbuja-1{width:220px;height:220px;top:-60px;left:-70px;}
+.burbuja-2{width:160px;height:160px;top:40%;right:-60px;}
+.burbuja-3{width:90px;height:90px;top:14%;right:12%;background:radial-gradient(circle at 32% 28%, rgba(12,140,140,.18), rgba(12,140,140,.02) 70%);}
+@media(prefers-reduced-motion:no-preference){
+  .burbuja{animation:flotar 9s ease-in-out infinite;}
+  .burbuja-2{animation-duration:11s;animation-delay:.6s;}
+  .burbuja-3{animation-duration:7.5s;animation-delay:1.2s;}
+}
+@keyframes flotar{0%,100%{transform:translateY(0);}50%{transform:translateY(-16px);}}
+
+/* ola decorativa al pie del hero */
+.ola{display:block;width:100%;height:auto;position:relative;z-index:2;margin-top:-1px;}
+
+.video-box{
+    width:min(96vw, 620px);
+    margin:0 auto 1.8rem;
+    border:1px solid var(--borde);
+    border-radius:28px;
+    overflow:hidden;
+    background:#000;
+    aspect-ratio:9/16;
+    position:relative;
+    box-shadow:0 28px 60px -24px rgba(14,42,50,.45);
+}
+
+.video-box img,
+.video-box video,
+.video-box iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+.video-box video, .video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover;}
+.video-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;color:#CFE3E3;font-size:.85rem;background:linear-gradient(160deg,#123B3B,#0E2A32);}
+.video-placeholder .play{width:56px;height:56px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.4rem;}
+.precio-mini{display:flex;align-items:baseline;justify-content:center;gap:.7rem;margin-bottom:1.4rem;}
+.precio-mini .actual{font-family:'Bebas Neue',sans-serif;font-size:2.1rem;color:var(--teal);}
+.precio-mini .anterior{color:var(--rojo);text-decoration:line-through;font-size:1.05rem;}
+.micro-benef{color:var(--gris-texto);font-size:.85rem;margin-top:1.2rem;}
+
+/* ---------- RESULTADO (antes/después) — sección propia, justo tras el hero ---------- */
+.sello{
+  position:absolute;
+  top:-16px;
+  right:-14px;
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:var(--teal);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:.6rem;
+  font-weight:700;
+  line-height:1.15;
+  letter-spacing:.02em;
+  transform:rotate(9deg);
+  box-shadow:0 12px 26px -10px rgba(12,140,140,.6);
+  border:2px dashed rgba(255,255,255,.55);
+  padding:.4rem;
+  z-index:5;
+}
+@media(max-width:480px){.sello{width:72px;height:72px;font-size:.52rem;top:-10px;right:-8px;}}
+
+/* comparador antes/después — reutilizable */
+.comparador-wrap{position:relative;max-width:560px;margin:2rem auto 0;}
+.comparador{position:relative;width:100%;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;border:1px solid var(--borde);cursor:ew-resize;user-select:none;touch-action:none;box-shadow:0 16px 40px -26px rgba(14,42,50,.28);}
+.comp-despues,.comp-antes{position:absolute;inset:0;background-size:cover;background-position:center;}
+.comp-antes{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0);}
+.ph-antes{background:linear-gradient(150deg,#7C6A4A,#9C8A64 45%,#5E5237);}
+.ph-despues{background:linear-gradient(150deg,#0C8C8C,#3FB6B6 45%,#EAF9F7 85%);}
+.comp-tag{position:absolute;top:.8rem;font-size:.62rem;font-weight:700;letter-spacing:.05em;padding:.3rem .65rem;border-radius:6px;background:rgba(14,42,50,.75);color:#fff;z-index:3;}
+.tag-antes{left:.8rem;}
+.tag-despues{right:.8rem;background:var(--teal);}
+.comp-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:0;z-index:4;}
+.comp-handle::before{content:"";position:absolute;top:0;bottom:0;left:0;width:2px;background:#fff;}
+.comp-handle .grip{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;}
+
+/* ---------- CARRUSEL DE PÁGINAS (deslice automático) ---------- */
+.carrusel-wrap{overflow:hidden;position:relative;margin-top:2.2rem;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
+.carrusel-track{display:flex;gap:1rem;width:max-content;animation:desplazar 30s linear infinite;}
+.carrusel-wrap:hover .carrusel-track{animation-play-state:paused;}
+@keyframes desplazar{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media(prefers-reduced-motion:reduce){
+  .carrusel-track{animation:none;}
+  .carrusel-wrap{overflow-x:auto;}
+}
+.pagina-card{flex:0 0 auto;width:200px;aspect-ratio:3/4;border-radius:16px;overflow:hidden;border:1px solid var(--borde);background:linear-gradient(160deg,#F3F6F7,#E4EAEC);box-shadow:0 14px 30px -20px rgba(14,42,50,.3);position:relative;}
+@media(min-width:680px){.pagina-card{width:230px;}}
+.pagina-card img{width:100%;height:100%;object-fit:cover;}
+.pagina-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:var(--gris-texto);font-size:.72rem;text-align:center;padding:1rem;}
+.pagina-placeholder .num{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--teal);letter-spacing:.03em;}
+.pagina-cta{text-align:center;margin-top:2.4rem;}
+.pagina-cta p{font-family:'Inter',sans-serif;font-weight:700;font-size:1.15rem;color:var(--oscuro);max-width:560px;margin:0 auto 1.3rem;line-height:1.4;}
+
+/* ---------- BONOS EXCLUSIVOS ---------- */
+.grid-bonos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;margin-top:2.2rem;}
+.bono-card{padding:0;overflow:hidden;position:relative;}
+.bono-numero{position:absolute;top:.9rem;left:.9rem;z-index:2;background:rgba(14,42,50,.72);backdrop-filter:blur(3px);color:#fff;font-size:.64rem;font-weight:800;letter-spacing:.06em;padding:.3rem .7rem;border-radius:99px;}
+.bono-card .card-body h3{font-family:'Inter',sans-serif;font-weight:700;font-size:.98rem;margin-bottom:.4rem;color:var(--oscuro);}
+.bono-card .card-body p{color:var(--gris-texto);font-size:.86rem;line-height:1.55;}
+
+/* ---------- LOGROS (qué vas a aprender) ---------- */
+.grid-logros{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem;margin-top:2.2rem;}
+.logro{padding:0;overflow:hidden;}
+
+/* ---------- componente reutilizable: cabecera visual con imagen o gradiente + ícono grande ---------- */
+/* usado por las tarjetas de "qué vas a aprender" y por los "bonos" */
+.card-visual{width:100%;aspect-ratio:16/10;position:relative;overflow:hidden;}
+.card-visual img{width:100%;height:100%;object-fit:cover;}
+.card-visual .icono-grande{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.card-visual .icono-grande .caja{width:58px;height:58px;border-radius:16px;background:rgba(255,255,255,.16);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;color:#fff;}
+.card-visual .icono-grande .caja svg{width:28px;height:28px;}
+.card-body{padding:1.35rem 1.4rem 1.5rem;}
+.logro .card-body h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1.02rem;margin-bottom:.45rem;color:var(--oscuro);}
+.logro .card-body p{color:var(--gris-texto);font-size:.9rem;line-height:1.55;}
+
+/* ---------- INCLUYE ---------- */
+.lista-incluye{list-style:none;margin:2.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;max-width:760px;margin-left:auto;margin-right:auto;}
+.lista-incluye li{display:flex;gap:.9rem;align-items:flex-start;border:1px solid var(--borde);border-radius:16px;padding:1.1rem 1.2rem;background:#fff;box-shadow:0 12px 26px -20px rgba(14,42,50,.25);text-align:left;}
+.lista-incluye .ico{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lista-incluye .ico svg{width:21px;height:21px;}
+.lista-incluye .txt b{display:block;font-size:.94rem;margin-bottom:.2rem;color:var(--oscuro);}
+.lista-incluye .txt span{color:var(--gris-texto);font-size:.84rem;line-height:1.5;}
+.tag-proximamente{display:inline-block;margin-left:.4rem;font-size:.62rem;font-weight:700;color:var(--teal);border:1px solid var(--teal);border-radius:99px;padding:.1rem .5rem;vertical-align:middle;}
+
+/* ---------- DOS MANUALES ---------- */
+.grid-manuales{display:grid;gap:1.1rem;margin-top:2.2rem;}
+@media(min-width:680px){.grid-manuales{grid-template-columns:1fr 1fr;}}
+/* ---------- SISTEMA DE COLORES DE ACENTO (para iconos, tarjetas e imágenes) ---------- */
+/* Se usan para dar variedad visual sin perder la paleta profesional. */
+:root{
+  --c-teal-1:#0C8C8C;   --c-teal-2:#3FB6B6;   --c-teal-t:rgba(12,140,140,.12);
+  --c-azul-1:#0B63B0;   --c-azul-2:#4FA3E8;   --c-azul-t:rgba(11,99,176,.12);
+  --c-morado-1:#6C3FB5; --c-morado-2:#9B6FE0; --c-morado-t:rgba(108,63,181,.12);
+  --c-ambar-1:#B9760F;  --c-ambar-2:#E8A93A;  --c-ambar-t:rgba(185,118,15,.13);
+  --c-rosa-1:#C23B6C;   --c-rosa-2:#E86FA0;   --c-rosa-t:rgba(194,59,108,.12);
+  --c-verde-1:#1F8A4C;  --c-verde-2:#3FBE73;  --c-verde-t:rgba(31,138,76,.12);
+}
+
+/* ---------- BADGE genérico arriba de cualquier título de sección ---------- */
+.badge-seccion{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-bottom:1.1rem;}
+.badge-seccion.izq{justify-content:flex-start;}
+.badge-seccion .chispas{color:var(--teal);flex-shrink:0;}
+.badge-seccion .pill{background:var(--teal);color:#fff;font-family:'Inter',sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.03em;padding:.5rem 1.2rem;border-radius:99px;box-shadow:0 10px 22px -12px rgba(12,140,140,.6);}
+.badge-seccion .emoji{font-size:1.3rem;flex-shrink:0;}
+@media(max-width:420px){.badge-seccion .pill{font-size:.7rem;padding:.45rem .9rem;}}
+
+/* ---------- decorado especial del título de Testimonios (comillas grandes) ---------- */
+.titulo-testimonios{position:relative;display:inline-block;}
+.titulo-testimonios .comilla{position:absolute;font-family:Georgia,serif;font-weight:700;font-size:5.5rem;color:var(--teal);opacity:.16;line-height:1;pointer-events:none;user-select:none;}
+.titulo-testimonios .comilla.izq{left:-1.6rem;top:-1.6rem;}
+.titulo-testimonios .comilla.der{right:-1.6rem;bottom:-2.4rem;transform:rotate(180deg);}
+@media(max-width:560px){.titulo-testimonios .comilla{font-size:3.6rem;}.titulo-testimonios .comilla.izq{left:-.8rem;top:-1rem;}.titulo-testimonios .comilla.der{right:-.8rem;bottom:-1.6rem;}}
+
+/* ---------- BADGE "2 MANUALES" arriba del título ---------- */
+/* .manuales-badge ahora reutiliza .badge-seccion (ver arriba) */
+
+/* ---------- subrayado tipo "hecho a mano" dentro del título ---------- */
+.subrayado{position:relative;display:inline-block;color:var(--teal);}
+.subrayado .swash{position:absolute;left:0;bottom:-11px;width:100%;height:14px;color:var(--teal);}
+
+/* ---------- tarjeta de manual: número + portada + tag + footer de destacados ---------- */
+.manual-card{padding:1.7rem;}
+.manual-top{display:flex;gap:1.1rem;align-items:flex-start;margin-bottom:1.3rem;}
+.manual-cover{
+  width:100px;flex-shrink:0;aspect-ratio:3/4;border-radius:12px;overflow:hidden;position:relative;
+  background:linear-gradient(155deg,var(--oscuro) 0%,var(--teal-oscuro) 100%);
+  box-shadow:0 14px 26px -14px rgba(14,42,50,.55);
+  display:flex;flex-direction:column;justify-content:space-between;padding:.55rem .55rem;
+}
+.manual-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.manual-cover .cov-label{font-size:.48rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#8FE0DA;}
+.manual-cover .cov-titulo{font-family:'Bebas Neue',sans-serif;font-size:.92rem;line-height:1.08;color:#fff;letter-spacing:.01em;}
+.manual-cover .cov-icono{width:22px;height:22px;color:var(--teal);align-self:flex-end;}
+.manual-info{flex:1;min-width:0;padding-top:.1rem;}
+.manual-info .numero{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--teal);line-height:1;margin-bottom:.35rem;}
+.manual-info .tag{display:inline-block;background:var(--teal-suave);color:var(--teal-oscuro);font-size:.62rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.28rem .65rem;border-radius:99px;margin-bottom:.55rem;}
+.manual-card h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.5rem;color:var(--oscuro);line-height:1.3;}
+.manual-card p{color:var(--gris-texto);font-size:.88rem;line-height:1.55;}
+.manual-divisor{height:1px;background:var(--borde);margin:1.3rem 0 1.1rem;}
+.manual-footer{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;}
+.manual-foot-item{display:flex;align-items:center;gap:.5rem;}
+.manual-foot-item .ico{width:34px;height:34px;border-radius:9px;background:var(--teal-suave);color:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.manual-foot-item .ico svg{width:17px;height:17px;}
+.manual-foot-item span{font-size:.72rem;font-weight:700;color:var(--oscuro);line-height:1.25;}
+@media(max-width:420px){
+  .manual-footer{grid-template-columns:1fr;gap:.55rem;}
+}
+
+/* ---------- SOBRE MI ---------- */
+.sobremi{display:grid;gap:1.6rem;align-items:center;}
+@media(min-width:680px){.sobremi{grid-template-columns:1fr 1fr;}}
+.sobremi-fotos{display:grid;grid-template-columns:1.3fr 1fr;gap:.7rem;}
+.foto-box{border-radius:18px;overflow:hidden;border:1px solid var(--borde);aspect-ratio:3/4;background:linear-gradient(150deg,#F3F6F7,#E4EAEC);position:relative;}
+.foto-box img{width:100%;height:100%;object-fit:cover;}
+.foto-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--gris-texto);font-size:.72rem;text-align:center;padding:.6rem;}
+.sobremi-texto p{color:var(--gris-texto);font-size:.98rem;line-height:1.65;margin-bottom:.7rem;}
+
+/* ---------- TESTIMONIOS ---------- */
+.grid-test{display:grid;gap:1.1rem;margin-top:2.4rem;}
+@media(min-width:680px){.grid-test{grid-template-columns:1fr 1fr;}}
+.test-card{padding:1.4rem;}
+.test-card p.quote{color:var(--gris-texto);font-size:.9rem;line-height:1.55;margin-bottom:.9rem;}
+.test-card .autor{font-size:.85rem;font-weight:700;color:var(--oscuro);}
+.test-card .autor span{color:var(--gris-texto);font-weight:400;font-size:.78rem;}
+
+/* --- variante "clasica": avatar de iniciales + comilla grande de fondo --- */
+.test-clasica{position:relative;overflow:hidden;}
+.test-clasica .comilla-fondo{position:absolute;top:-.6rem;right:.4rem;font-family:Georgia,serif;font-size:4.5rem;font-weight:700;color:var(--gris-medio);line-height:1;user-select:none;}
+.test-clasica .fila-autor{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem;position:relative;z-index:1;}
+.test-clasica .avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-weight:800;font-size:.85rem;color:#fff;flex-shrink:0;}
+.test-clasica p.quote{position:relative;z-index:1;}
+
+/* --- variante "whatsapp": burbuja de chat con acento verde --- */
+.test-whatsapp{background:#EAFBF3;border-color:rgba(37,211,102,.28);border-radius:20px 20px 20px 4px;position:relative;}
+.test-whatsapp .encabezado{display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;}
+.test-whatsapp .encabezado .ico-wa{width:26px;height:26px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;flex-shrink:0;}
+.test-whatsapp .encabezado span{font-size:.7rem;font-weight:700;color:#1a9c56;letter-spacing:.02em;}
+
+/* --- variante "estrellas": calificación de 5 estrellas arriba --- */
+.test-estrellas .estrellas{display:flex;gap:.2rem;margin-bottom:.8rem;color:var(--ambar,#E8A93A);}
+.test-estrellas .estrellas svg{width:16px;height:16px;fill:#E8A93A;stroke:none;}
+
+/* --- variante "destacada": borde de color + insignia de verificado --- */
+.test-destacada{border-left:5px solid var(--teal);position:relative;}
+.test-destacada .verificado{position:absolute;top:1.1rem;right:1.1rem;display:flex;align-items:center;gap:.3rem;background:var(--teal-suave);color:var(--teal-oscuro);font-size:.62rem;font-weight:800;padding:.25rem .55rem;border-radius:99px;}
+.test-destacada .verificado svg{width:11px;height:11px;}
+.test-destacada p.quote{font-size:.95rem;font-weight:500;color:var(--oscuro);}
+
+/* ---------- PRECIO ---------- */
+.precio-card{max-width:440px;margin:2.2rem auto 0;padding:2.2rem 1.8rem;text-align:center;}
+.precio-card .anterior{color:var(--rojo);text-decoration:line-through;font-size:1.15rem;}
+.precio-card .actual{font-family:'Bebas Neue',sans-serif;font-size:3.4rem;color:var(--teal);margin:.2rem 0 .3rem;}
+.precio-card .usd{color:var(--gris-texto);font-size:.95rem;margin-bottom:.3rem;}
+.precio-card .nota-moneda{color:var(--gris-texto);font-size:.78rem;margin-bottom:1.4rem;}
+.precio-card .garantia{display:flex;align-items:center;justify-content:center;gap:.5rem;margin:1.4rem 0;color:var(--gris-texto);font-size:.85rem;}
+.precio-card .garantia b{color:var(--teal);}
+
+/* ---------- FAQ ---------- */
+.faq-item{border-bottom:1px solid var(--borde);}
+.faq-q{cursor:pointer;padding:1.2rem .2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.faq-q h3{font-family:'Inter',sans-serif;font-weight:600;font-size:.96rem;color:var(--oscuro);}
+.faq-q .mas{color:var(--teal);font-size:1.3rem;transition:transform .3s var(--ease);flex-shrink:0;}
+.faq-item.open .faq-q .mas{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
+.faq-a p{color:var(--gris-texto);font-size:.9rem;line-height:1.6;padding:0 .2rem .4rem;}
+
+/* ---------- STICKY CTA ---------- */
+.sticky-cta{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:55;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .35s var(--ease), transform .35s var(--ease);padding-bottom:env(safe-area-inset-bottom);}
+.sticky-cta.show{opacity:1;transform:translateY(0);pointer-events:auto;}
+.sticky-cta .btn{width:100%;font-size:1.02rem;padding:1.05rem;box-shadow:0 12px 34px -12px rgba(12,140,140,.6);}
+
+/* ---------- WHATSAPP FLOTANTE ---------- */
+.btn-whatsapp{position:fixed;right:1.1rem;bottom:5.6rem;z-index:56;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 8px 24px -6px rgba(14,42,50,.35);}
+
+/* ---------- FOOTER ---------- */
+footer{padding:3rem 0 7rem;border-top:1px solid var(--borde);text-align:center;background:var(--gris-claro);}
+footer .flogo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;margin-bottom:.7rem;text-transform:uppercase;color:var(--oscuro);}
+footer p{color:var(--gris-texto);font-size:.74rem;}
+</style>
+</head>
+<body>
+
+<!-- =====================================================================================
+     ░░░ PANEL DE CONTROL — EDITA AQUÍ TODA LA LANDING ░░░
+     Este es el ÚNICO lugar donde necesitas escribir o cambiar algo.
+     No necesitas tocar nada de lo que está después de este bloque.
+
+     ⚠️ IMPORTANTE ANTES DE PUBLICAR:
+     Solo falta 1 cosa marcada con "EDITA_":
+     - ENLACES.hotmart → el link real de pago de ESTE producto (Pack Tapicerías).
+     Precio y testimonios ya están cargados. Los testimonios son redactados
+     como ejemplo de alta conversión — reemplázalos por opiniones reales de
+     tus clientes en cuanto las tengas.
+
+     Cómo se usa:
+     - Para cambiar un texto: escribe entre las comillas '' ese nuevo texto.
+     - Para AGREGAR una tarjeta (testimonio, pregunta, logro...): copia un bloque
+       completo entre { } dentro de su lista [ ], pégalo abajo y cambia su texto.
+       No olvides la coma "," entre cada bloque.
+     - Para ELIMINAR una tarjeta: borra su bloque completo { ... } (incluida su coma).
+     - Para cambiar una foto: pon la ruta de tu archivo o una URL entre las comillas
+       del campo correspondiente en IMAGENES. Si lo dejas vacío '', se muestra
+       un diseño de muestra en su lugar.
+     - Para cambiar el video: solo modifica la línea "url" dentro de VIDEO.
+     - Para cambiar el link de compra: solo modifica ENLACES.hotmart, y se actualiza
+       automáticamente en TODOS los botones de la página.
+     - Cada tarjeta de LOGROS tiene un campo "icono" con una de estas palabras:
+       'telas', 'quimica', 'proceso', 'seguridad', 'negocio'. Cada palabra dibuja
+       un ícono distinto ya diseñado. Si agregas una tarjeta nueva, reutiliza
+       cualquiera de esas 5 palabras (el ícono se puede repetir sin problema).
+     ===================================================================================== -->
+<script>
+  // ---- ENLACES (cambia esto y se actualiza en todos los botones de la página) ----
+  const ENLACES = {
+    hotmart: 'https://go.hotmart.com/X102493529A',
+    whatsapp: 'https://wa.me/5219997066968'
+  };
+
+  // ---- VIDEO DEL HERO ----
+  // tipo: 'mp4' si subes un archivo de video, o 'embed' si usas un link de
+  // YouTube/Vimeo en formato insertar (ej: https://www.youtube.com/embed/ID)
+  const VIDEO = {
+    tipo: 'mp4',
+    url: ''   // ej: 'videos/promo-tapicerias.mp4'  — déjalo vacío para ver el marcador de posición
+  };
+
+  // ---- IMÁGENES (nombres descriptivos, una sola vez cada una) ----
+  const IMAGENES = {
+    fotoAntesTapiceria:     'fotos/hero-antes.jpg',
+    fotoDespuesTapiceria:   'fotos/hero-despues.jpg',
+    fotoAplicandoServicio:  'fotos/aplicando-servicio.jpg',
+    fotoAutor:              'fotos/foto-autor.jpg'
+  };
+
+  // ---- NOTA DE TRANSFERENCIA ----
+  // Este mismo texto aparece automáticamente en el Hero, en Precio y en el FAQ.
+  // Cámbialo aquí UNA sola vez y se actualiza en los 3 lugares.
+  const NOTA_TRANSFERENCIA = 'Recibe tus manuales inmediatamente al pagar con Hotmart. Si prefieres pagar por transferencia bancaria, también es posible. Una vez confirmado el pago, recibirás todo el material directamente por WhatsApp.';
+
+  // ---- BANNER DE OFERTA (franja superior de toda la página) ----
+  // Ponlo en false para ocultar el banner por completo.
+  const PROMO = {
+    activo: true,
+    texto: 'Precio de lanzamiento por tiempo limitado — <strong>antes $699, ahora $260 MXN</strong>'
+  };
+
+  // =====================================================================
+  // SECCIÓN 1 — HERO
+  // =====================================================================
+  const HERO = {
+    titulo: 'Aprende el Oficio Profesional de Limpieza de Tapicerías, <span class="teal">Desde Cero y con Criterio Técnico</span>',
+    subtitulo: 'Domina paso a paso el proceso completo de limpieza profesional: equipos, telas, química, procedimientos operativos y seguridad. Aprende a hacerlo bien, entendiendo el porqué de cada paso.',
+    precioActual: '$260 MXN',
+    precioAnterior: '$699 MXN',
+    textoBoton: 'Quiero mi pack ahora',
+    microBeneficios: 'Acceso inmediato · Garantía de 7 días · Soporte por WhatsApp'
+  };
+
+  // =====================================================================
+  // SECCIÓN 2 — RESULTADO (antes/después)
+  // =====================================================================
+  const RESULTADO = {
+    titulo: 'Así se Ve un Trabajo Hecho con Técnica',
+    subtitulo: 'Desliza para ver el resultado de aplicar el proceso profesional que enseñan los manuales.',
+    sello: '10+ AÑOS DE EXPERIENCIA REAL'
+  };
+  
+
+  // =====================================================================
+  // SECCIÓN 3 — QUÉ VAS A APRENDER (agrega, quita o reordena tarjetas aquí)
+  // El campo "icono" acepta: 'telas', 'quimica', 'proceso', 'seguridad', 'negocio'
+  // El campo "color" acepta: 'teal', 'azul', 'morado', 'ambar', 'rosa', 'verde'
+  // (define el degradado de fondo de la tarjeta cuando no hay imagen real)
+  // El campo "imagen" es opcional: pon una ruta/URL y se muestra en vez del
+  // degradado con ícono. Si lo dejas vacío '', se usa el degradado + ícono.
+  // =====================================================================
+  const LOGROS = {
+    badge: { texto: 'LO QUE VAS A DOMINAR', emoji: '🎯' },
+    titulo: '¿Qué Vas a Aprender?',
+    subtitulo: 'No es un curso genérico. Es el oficio explicado con la técnica y el criterio de más de 10 años de experiencia real.',
+     tarjetas: [
+
+  {
+    icono: 'telas',
+    color: 'teal',
+    imagen: 'imagenes/card-01-telas.webp',
+    titulo: 'Identificar telas y elegir el método correcto',
+    texto: 'Algodón, poliéster, lino, terciopelo, cuero y vinil: sabrás qué hacer y qué evitar en cada material.'
+  },
+
+  {
+    icono: 'quimica',
+    color: 'azul',
+    imagen: 'imagenes/card-02-quimica.webp',
+    titulo: 'Entender la química del oficio (pH)',
+    texto: 'Prelavadores, neutralizadores, enzimáticos y desinfectantes: qué producto usar y por qué.'
+  },
+
+  {
+    icono: 'proceso',
+    color: 'morado',
+    imagen: 'imagenes/card-03-proceso.webp',
+    titulo: 'Dominar el proceso operativo completo',
+    texto: 'Las 12 fases del servicio profesional, desde la inspección inicial hasta el cierre y mantenimiento del equipo.'
+  },
+
+  {
+    icono: 'seguridad',
+    color: 'ambar',
+    imagen: 'imagenes/card-04-seguridad.webp',
+    titulo: 'Trabajar con seguridad y criterio',
+    texto: 'Manejo de químicos, ergonomía y protocolos de emergencia, para cuidar tu salud mientras trabajas.'
+  },
+
+  {
+    icono: 'negocio',
+    color: 'verde',
+    imagen: 'imagenes/card-05-negocio.webp',
+    titulo: 'Sentar las bases de un negocio, no solo un oficio',
+    texto: 'Precios, costos, rutina diaria y estructura de equipo, explicados con ejemplos reales.'
+  }
+
+]
+};
+
+  // =====================================================================
+  // SECCIÓN 4 — MIRA ALGUNAS PÁGINAS (carrusel de deslice automático)
+  // "imagenes": pon aquí las rutas de tus capturas reales (ideal 4 a 8).
+  // Si lo dejas vacío [ ], se muestran tarjetas de muestra numeradas.
+  // =====================================================================
+  const PAGINAS = {
+    badge: { texto: 'VISTAZO REAL', emoji: '👀' },
+    titulo: 'Mira Algunas Páginas de los Manuales',
+    subtitulo: 'Contenido real, explicado con capturas, tablas y ejemplos — no solo texto.',
+    imagenes: [    
+    'fotos/pagina-1.jpg',
+    'fotos/pagina-2.jpg',
+    'fotos/pagina-3.jpg',
+    'fotos/pag49.jpg'
+    ],
+    fraseCierre: '¿Vas a seguir aprendiendo por prueba y error, o vas a aprenderlo con criterio técnico desde el inicio?',
+    textoBoton: 'Quiero el manual'
+  };
+
+  // =====================================================================
+  // SECCIÓN 5 — QUÉ INCLUYE
+  // El campo "icono" acepta: 'telas', 'quimica', 'proceso', 'seguridad', 'negocio',
+  // 'graduacion', 'persona', 'estrella', 'megafono'.
+  // El campo "color" acepta: 'teal', 'azul', 'morado', 'ambar', 'rosa', 'verde'
+  // =====================================================================
+  const INCLUYE = {
+    badge: { texto: 'TODO EN UN SOLO PACK', emoji: '📦' },
+    titulo: 'Qué Incluye tu Compra',
+    items: [
+      { icono: 'graduacion', color: 'teal', titulo: 'Manual Base: "Cómo Construir tu Imperio de Limpieza de Tapicerías"', texto: 'Más de 100 páginas paso a paso: equipos, telas, química, procesos operativos y seguridad.' },
+      { icono: 'negocio', color: 'azul', titulo: 'Manual Avanzado: "El Arte de Crecer"', texto: 'La segunda etapa: cómo vender, publicitarte, crear marca y atraer clientes por internet.' },
+      { icono: 'estrella', color: 'ambar', titulo: '4 Bonos Exclusivos (plantillas editables)', texto: 'Cotización, check list de equipo, bitácora diaria y carta de servicio.' },
+      { icono: 'check', color: 'morado', titulo: 'Acceso inmediato y de por vida', texto: 'Descarga los 2 manuales y los 4 bonos al instante, para consultarlos cuando quieras.' }
+    ]
+  };
+
+  // =====================================================================
+  // SECCIÓN 6 — BONOS EXCLUSIVOS (a detalle)
+  // El campo "icono" acepta: 'telas', 'quimica', 'proceso', 'seguridad', 'negocio'
+  // El campo "color" define el degradado de fondo cuando no hay imagen real:
+  // 'teal', 'azul', 'morado', 'ambar', 'rosa', 'verde'
+  // El campo "imagen" es opcional: pon una ruta/URL (ideal una foto/mockup de
+  // la plantilla) y se muestra en vez del degradado con ícono.
+  // =====================================================================
+  const BONOS = {
+    badge: { texto: 'INCLUIDO SIN COSTO EXTRA', emoji: '🎁' },
+    titulo: 'También Vas a Recibir 4 Bonos Exclusivos',
+    subtitulo: 'Plantillas listas para usar desde tu primer servicio, incluidas sin costo extra.',
+    tarjetas: [
+      { numero: 'Regalo 1', icono: 'proceso', color: 'teal', imagen: 'fotos/bono-01-cotizacion.webp', titulo: 'Plantilla de Cotización', texto: 'Lista para personalizar y enviar a tus clientes en minutos.' },
+      { numero: 'Regalo 2', icono: 'seguridad', color: 'azul', imagen: 'fotos/bono-02-checklist.webp', titulo: 'Check List de Equipo', texto: 'Verifica que tu equipo y productos estén listos antes de cada servicio.' },
+      { numero: 'Regalo 3', icono: 'negocio', color: 'ambar', imagen: 'fotos/bono-03-bitacora.webp', titulo: 'Bitácora Diaria', texto: 'Registra tus servicios, tiempos, equipos usados e incidencias como un negocio real.' },
+      { numero: 'Regalo 4', icono: 'telas', color: 'rosa', imagen: 'fotos/bono-04-carta.webp', titulo: 'Carta de Servicio', texto: 'Formato profesional listo para imprimir y entregar a tus clientes.' }
+    ]
+  };
+
+  // =====================================================================
+  // SECCIÓN 7 — LOS 2 MANUALES (a detalle)
+  // El campo "icono" de cada destacado acepta: 'telas', 'quimica', 'proceso',
+  // 'seguridad', 'negocio', 'graduacion', 'persona', 'estrella', 'megafono'.
+  // El campo "color" de cada destacado pinta su ícono: 'teal', 'azul',
+  // 'morado', 'ambar', 'rosa', 'verde'.
+  // El campo "imagenPortada" de cada tarjeta es opcional: pon una ruta/URL
+  // (ideal la portada real de tu manual) y se muestra en vez del texto
+  // "coverEyebrow / coverTitulo". Si lo dejas vacío '', se usa el texto.
+  // =====================================================================
+  const MANUALES = {
+    badge: { texto: '2 MANUALES', emoji: '🔥' },
+    titulo: 'Dos Manuales, Una Sola Meta:<br>Que Aprendas el <span class="subrayado">Oficio a Fondo<svg class="swash" viewBox="0 0 240 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12c40-11,80,11,120,0s76-11,116,0" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span>',
+    subtitulo1: 'Primero aprendes a operar con calidad profesional.',
+    subtitulo2: 'Después aprendes a venderlo y hacerlo crecer.',
+    tarjetas: [
+      {
+        numero: '01',
+        tag: 'Manual Base',
+        coverEyebrow: 'Manual Base',
+        coverTitulo: 'Cómo Construir tu Imperio de Limpieza de Tapicerías',
+        coverIcono: 'proceso',
+        imagenPortada: 'fotos/manual-base.webp',
+        titulo: '"Cómo Construir tu Imperio de Limpieza de Tapicerías"',
+        texto: 'La base técnica del oficio: cómo operar, entender los materiales y trabajar con calidad profesional, incluso sin experiencia previa.',
+        destacados: [
+          { icono: 'graduacion', color: 'teal', texto: 'Técnico<br>Paso a paso' },
+          { icono: 'seguridad', color: 'azul', texto: 'Calidad<br>Profesional' },
+          { icono: 'persona', color: 'morado', texto: 'Sin experiencia<br>previa' }
+        ]
+      },
+      {
+        numero: '02',
+        tag: 'Manual Avanzado',
+        coverEyebrow: 'Manual Avanzado',
+        coverTitulo: 'El Arte de Crecer',
+        coverIcono: 'negocio',
+        imagenPortada: 'fotos/manual-avanzado.webp',
+        titulo: '"El Arte de Crecer"',
+        texto: 'Donde pasas de conocer la técnica a construir un negocio: ventas, publicidad, marca y estrategias digitales.',
+        destacados: [
+          { icono: 'negocio', color: 'verde', texto: 'Ventas y<br>Publicidad' },
+          { icono: 'estrella', color: 'rosa', texto: 'Marca y<br>Posicionamiento' },
+          { icono: 'megafono', color: 'ambar', texto: 'Estrategias<br>Digitales' }
+        ]
+      }
+    ]
+  };
+
+  // =====================================================================
+  // SECCIÓN 8 — SOBRE MÍ
+  // =====================================================================
+  const SOBRE_MI = {
+    badge: { texto: 'QUIÉN ESTÁ DETRÁS', emoji: '👤' },
+    titulo: 'Sobre Mí',
+    parrafos: [
+      'Soy Arturo Iglesias y llevo más de una década trabajando en limpieza profesional de tapicerías. Durante estos años he documentado procedimientos, errores, soluciones y estándares que hoy forman el método que aprenderas. Lo que encontrarás en estos manuales es exactamente el proceso que aplico en servicios reales: desde la inspección y la química correcta hasta la operación, la entrega al cliente y el crecimiento del negocio.'
+    ]
+  };
+
+  // =====================================================================
+  // SECCIÓN 9 — TESTIMONIOS (agrega, quita o reordena tarjetas aquí)
+  // Nota: estos testimonios son ejemplos redactados para la página.
+  // Reemplázalos por opiniones reales de tus clientes en cuanto las tengas.
+  // El campo "tipo" acepta: 'clasica', 'whatsapp', 'estrellas', 'destacada'
+  // (cada una tiene un diseño distinto, para que las tarjetas no se vean repetitivas).
+  // El campo "color" (solo aplica a 'clasica') pinta el avatar con iniciales:
+  // 'teal', 'azul', 'morado', 'ambar', 'rosa', 'verde'
+  // =====================================================================
+  const TESTIMONIOS = {
+    badge: { texto: 'HISTORIAS REALES', emoji: '💬' },
+    titulo: 'Lo Que Dicen Quienes Ya lo Aplican',
+    tarjetas: [
+      { tipo: 'clasica', color: 'teal', texto: 'La verdad yo ya sabía tallar bien, pero no entendía por qué a veces el sofá me quedaba pegajoso al día siguiente. Resulta que nunca neutralizaba nada, ni sabía que ese paso existía. Ahora sí cierro el servicio como se debe.', nombre: 'Diego Hernández', rol: 'Monterrey, México' },
+      { tipo: 'whatsapp', texto: 'Empecé sin saber nada, literal. Lo que más me ayudó fue el capítulo de telas, porque yo antes le echaba lo mismo a todo 😅 y ya se me había manchado un sillón de lino. Las plantillas también están bien prácticas, ya no ando cotizando en papelito.', nombre: 'Marisol Cantú', rol: 'Guadalajara, México' },
+      { tipo: 'estrellas', texto: 'Llevo año y medio con mi negocio en Medellín y aun así aprendí cosas que no sabía, sobre todo en la parte de seguridad y manejo de químicos. Uno cree que ya la tiene clara hasta que lee esto.', nombre: 'Juan Camilo Restrepo', rol: 'Medellín, Colombia' },
+      { tipo: 'destacada', texto: 'No tenía ni idea de por dónde empezar. Lo que se me quedó grabado fue lo de probar la tela antes de meterle cualquier producto — eso solito me ha salvado de dañar un mueble más de una vez.', nombre: 'Andrea Morales', rol: 'Ciudad de Guatemala, Guatemala' }
+    ]
+  };
+
+  // =====================================================================
+  // SECCIÓN 10 — PRECIO
+  // =====================================================================
+  const PRECIO = {
+    badge: { texto: 'OFERTA DE LANZAMIENTO', emoji: '🚀' },
+    titulo: 'Empieza a Aprender Hoy Mismo',
+    subtitulo: 'Aprende el oficio con bases sólidas y las herramientas para ejercerlo como un profesional, en un solo pack.',
+    actual: '$260 MXN',
+    anterior: '$699 MXN',
+    usd: '≈ USD $14',
+    notaMoneda: 'El precio en tu moneda local podrás verlo en Hotmart durante el proceso de pago.',
+    garantiaTexto: 'Garantía de satisfacción de 7 días',
+    textoBoton: 'Comprar con Hotmart'
+  };
+
+  // =====================================================================
+  // SECCIÓN 11 — FAQ (agrega, quita o reordena preguntas aquí)
+  // =====================================================================
+  const FAQ = {
+    badge: { texto: 'RESUELVE TUS DUDAS', emoji: '❓' },
+    titulo: 'Preguntas Frecuentes',
+    preguntas: [
+      { p: '¿Necesito experiencia previa?', r: 'No. Los manuales están diseñados para aprender el oficio desde cero y explican cada paso, desde el equipo básico hasta el proceso operativo completo.' },
+      { p: '¿Sirve si ya tengo experiencia en el oficio?', r: 'Sí. Muchos técnicos con experiencia lo usan para corregir errores de proceso, entender mejor la química y aprender a organizar y hacer crecer su negocio.' },
+      { p: '¿Puedo pagar por transferencia?', r: NOTA_TRANSFERENCIA },
+      { p: '¿El precio cambia según mi país?', r: 'El precio se muestra en pesos mexicanos, pero Hotmart te mostrará el equivalente en tu moneda local durante el pago.' },
+      { p: '¿Hay garantía?', r: 'Sí. Cuentas con 7 días de garantía de satisfacción a través de Hotmart.' },
+      { p: '¿Qué incluye exactamente la compra?', r: 'Los 2 manuales en PDF (Base + Avanzado), plantilla de cotización, check list de equipo, bitácora diaria, carta de servicio y soporte por WhatsApp.' }
+    ]
+  };
+</script>
+<!-- ===================== FIN DEL PANEL DE CONTROL ===================== -->
+
+
+<!-- =====================================================================
+     SECCIÓN 1 / 11 — HERO
+     Puedes borrar este bloque completo sin afectar el resto de la página.
+     ===================================================================== -->
+<div class="banner-promo" id="banner-promo">
+  <span class="brillo"></span>
+  <span class="icono-fuego"></span>
+  <span id="banner-promo-texto"></span>
+</div>
+<div class="hero-wrap">
+  <div class="burbuja burbuja-1"></div>
+  <div class="burbuja burbuja-2"></div>
+  <div class="burbuja burbuja-3"></div>
+  <section id="sec-hero" style="padding-bottom:0;">
+    <div class="container hero">
+      <h1 class="display" id="hero-titulo"></h1>
+      <p class="sub" id="hero-subtitulo"></p>
+
+      <div class="video-box" id="hero-media">
+  <img src="fotos/hero-principal.webp" alt="Aprende y Emprende Tapicería">
+</div>
+
+      <div class="precio-mini">
+        <span class="anterior" id="hero-precio-anterior"></span>
+        <span class="actual" id="hero-precio-actual"></span>
+      </div>
+
+      <a href="#" class="btn btn-cta btn-cta-enlace" id="hero-boton"></a>
+      <p class="micro-benef" id="hero-micro"></p>
+
+      <div class="nota-transferencia centro" id="nota-transferencia-hero"></div>
+    </div>
+  </section>
+  <svg class="ola" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,32 C240,80 480,0 720,24 C960,48 1200,88 1440,40 L1440,90 L0,90 Z" fill="#F3F6F7"></path>
+  </svg>
+</div>
+<!-- FIN SECCIÓN 1 — HERO -->
+
+
+<!-- =====================================================================
+     SECCIÓN 2 / 11 — RESULTADO (antes/después)
+     ===================================================================== -->
+<section id="sec-resultado" style="background:var(--gris-claro);padding-top:1rem;">
+  <div class="container">
+    <h2 class="display centro" id="resultado-titulo" style="font-size:2rem;max-width:580px;"></h2>
+    <p class="texto-sec centro" id="resultado-subtitulo"></p>
+
+    <div class="comparador-wrap">
+      <div class="sello" id="resultado-sello"></div>
+      <div class="comparador" id="comparador-logros">
+        <div class="comp-despues ph-despues" id="comp-despues"></div>
+        <div class="comp-antes ph-antes" id="comp-antes"></div>
+        <span class="comp-tag tag-antes">ANTES</span>
+        <span class="comp-tag tag-despues">DESPUÉS</span>
+        <div class="comp-handle"><div class="grip">⇔</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 2 — RESULTADO -->
+
+
+<!-- =====================================================================
+     SECCIÓN 3 / 11 — QUÉ VAS A APRENDER
+     ===================================================================== -->
+<section id="sec-logros">
+  <div class="container">
+    <div class="badge-seccion" id="logros-badge">
+      <svg class="chispas" viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+      <span class="pill" id="logros-badge-texto"></span>
+      <span class="emoji" id="logros-badge-emoji"></span>
+    </div>
+    <h2 class="display centro" id="logros-titulo" style="font-size:2.1rem;max-width:560px;"></h2>
+    <p class="texto-sec centro" id="logros-subtitulo"></p>
+    <div class="grid-logros" id="logros-grid"></div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 3 — QUÉ VAS A APRENDER -->
+
+
+<!-- =====================================================================
+     SECCIÓN 4 / 11 — MIRA ALGUNAS PÁGINAS (carrusel de deslice automático)
+     ===================================================================== -->
+<section id="sec-paginas" style="background:var(--gris-claro);">
+  <div class="container">
+        <div class="badge-seccion" id="paginas-badge">
+      <svg class="chispas" viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+      <span class="pill" id="paginas-badge-texto"></span>
+      <span class="emoji" id="paginas-badge-emoji"></span>
+    </div>
+    <h2 class="display centro" id="paginas-titulo" style="font-size:2.1rem;max-width:600px;"></h2>
+    <p class="texto-sec centro" id="paginas-subtitulo"></p>
+
+    <div class="carrusel-wrap">
+      <div class="carrusel-track" id="paginas-track"></div>
+    </div>
+
+    <div class="pagina-cta">
+      <p id="paginas-frase"></p>
+      <a href="#" class="btn btn-cta btn-cta-enlace" id="paginas-boton"></a>
+    </div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 4 — MIRA ALGUNAS PÁGINAS -->
+
+
+<!-- =====================================================================
+     SECCIÓN 5 / 11 — QUÉ INCLUYE
+     ===================================================================== -->
+<section id="sec-incluye">
+  <div class="container">
+    <div class="badge-seccion" id="incluye-badge">
+      <svg class="chispas" viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+      <span class="pill" id="incluye-badge-texto"></span>
+      <span class="emoji" id="incluye-badge-emoji"></span>
+    </div>
+    <h2 class="display centro" id="incluye-titulo" style="font-size:2.1rem;"></h2>
+    <ul class="lista-incluye" id="incluye-lista"></ul>
+  </div>
+</section>
+<!-- FIN SECCIÓN 5 — QUÉ INCLUYE -->
+
+
+<!-- =====================================================================
+     SECCIÓN 6 / 11 — BONOS EXCLUSIVOS
+     ===================================================================== -->
+<section id="sec-bonos" style="background:var(--gris-claro);">
+  <div class="container">
+        <div class="badge-seccion" id="bonos-badge">
+      <svg class="chispas" viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+      <span class="pill" id="bonos-badge-texto"></span>
+      <span class="emoji" id="bonos-badge-emoji"></span>
+    </div>
+    <h2 class="display centro" id="bonos-titulo" style="font-size:2.1rem;max-width:640px;"></h2>
+    <p class="texto-sec centro" id="bonos-subtitulo"></p>
+    <div class="grid-bonos" id="bonos-grid"></div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 6 — BONOS EXCLUSIVOS -->
+
+
+<!-- =====================================================================
+     SECCIÓN 7 / 11 — LOS 2 MANUALES A DETALLE
+     ===================================================================== -->
+<section id="sec-manuales">
+  <div class="container">
+    <div class="badge-seccion" id="manuales-badge">
+      <svg class="chispas" viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+      <span class="pill" id="manuales-badge-texto"></span>
+      <span class="emoji" id="manuales-badge-emoji"></span>
+    </div>
+    <h2 class="display centro" id="manuales-titulo" style="font-size:2.1rem;max-width:640px;"></h2>
+<p class="texto-sec centro" style="max-width:600px; margin-top:22px;">      <span id="manuales-subtitulo1"></span><br>
+      <strong id="manuales-subtitulo2" style="color:var(--oscuro);"></strong>
+    </p>
+    <div class="grid-manuales" id="manuales-grid"></div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 7 — LOS 2 MANUALES A DETALLE -->
+
+
+<!-- =====================================================================
+     SECCIÓN 8 / 11 — SOBRE MÍ
+     ===================================================================== -->
+<section id="sec-sobremi" style="background:var(--gris-claro);">
+  <div class="container sobremi">
+    <div class="sobremi-fotos">
+      <div class="foto-box" id="foto-autor-box"><div class="foto-placeholder">Foto del autor — agrega tu imagen en IMAGENES.fotoAutor</div></div>
+      <div class="foto-box" id="foto-servicio-box"><div class="foto-placeholder">Foto realizando un servicio</div></div>
+    </div>
+    <div class="sobremi-texto">
+      <div class="badge-seccion izq" id="sobremi-badge">
+        <svg class="chispas" viewBox="0 0 40 40" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+        <span class="pill" id="sobremi-badge-texto"></span>
+        <span class="emoji" id="sobremi-badge-emoji"></span>
+      </div>
+      <h2 class="display" id="sobremi-titulo" style="font-size:2.1rem;"></h2>
+      <div id="sobremi-parrafos" style="margin-top:1.2rem;"></div>
+    </div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 8 — SOBRE MÍ -->
+
+
+<!-- =====================================================================
+     SECCIÓN 9 / 11 — TESTIMONIOS
+     ===================================================================== -->
+<section id="sec-testimonios">
+  <div class="container">
+    <div class="badge-seccion" id="testimonios-badge">
+      <svg class="chispas" viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+      <span class="pill" id="testimonios-badge-texto"></span>
+      <span class="emoji" id="testimonios-badge-emoji"></span>
+    </div>
+    <h2 class="display centro titulo-testimonios" id="testimonios-titulo" style="font-size:2.1rem;max-width:560px;">
+      <span class="comilla izq" aria-hidden="true">&ldquo;</span><span id="testimonios-titulo-texto"></span><span class="comilla der" aria-hidden="true">&ldquo;</span>
+    </h2>
+    <div class="grid-test" id="testimonios-grid"></div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 9 — TESTIMONIOS -->
+
+
+<!-- =====================================================================
+     SECCIÓN 10 / 11 — PRECIO
+     ===================================================================== -->
+<section id="sec-precio" style="background:var(--gris-claro);">
+  <div class="container centro">
+    <div class="badge-seccion" id="precio-badge">
+      <svg class="chispas" viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+      <span class="pill" id="precio-badge-texto"></span>
+      <span class="emoji" id="precio-badge-emoji"></span>
+    </div>
+    <h2 class="display" id="precio-titulo" style="font-size:2.3rem;"></h2>
+    <p class="texto-sec centro" id="precio-subtitulo"></p>
+
+    <div class="glass precio-card">
+      <p class="anterior" id="precio-anterior"></p>
+      <p class="actual" id="precio-actual"></p>
+      <p class="usd" id="precio-usd"></p>
+      <p class="nota-moneda" id="precio-nota-moneda"></p>
+      <a href="#" class="btn btn-cta btn-cta-enlace btn-block" id="precio-boton"></a>
+      <div class="garantia"><b>✓</b> <span id="precio-garantia"></span></div>
+    </div>
+
+    <div class="nota-transferencia centro" id="nota-transferencia-precio" style="margin:1.6rem auto 0;"></div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 10 — PRECIO -->
+
+
+<!-- =====================================================================
+     SECCIÓN 11 / 11 — FAQ
+     ===================================================================== -->
+<section id="sec-faq">
+  <div class="container" style="max-width:700px;">
+    <div class="badge-seccion" id="faq-badge">
+      <svg class="chispas" viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="30" x2="12" y2="24"/><line x1="14" y1="14" x2="16" y2="8"/><line x1="24" y1="10" x2="28" y2="6"/></svg>
+      <span class="pill" id="faq-badge-texto"></span>
+      <span class="emoji" id="faq-badge-emoji"></span>
+    </div>
+    <h2 class="display centro" id="faq-titulo" style="font-size:2.1rem;"></h2>
+    <div id="faq-lista" style="margin-top:1.6rem;"></div>
+  </div>
+</section>
+<!-- FIN SECCIÓN 11 — FAQ -->
+
+
+<footer>
+  <div class="container">
+    <div class="flogo">Manuales JARBO</div>
+    <p>© 2026 Manuales JARBO. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a href="#" class="btn btn-cta btn-cta-enlace" id="sticky-boton">Comprar ahora</a>
+</div>
+
+
+<!-- =====================================================================
+     MOTOR DE LA PÁGINA — no necesitas editar nada de aquí en adelante.
+     Cada función dibuja UNA sección a partir del Panel de Control de arriba.
+     Si borras el bloque de una sección, su función simplemente no hace
+     nada (no rompe el resto de la página).
+     ===================================================================== -->
+<script>
+/* ---------- iconos minimalistas usados en "¿Qué vas a aprender?" ---------- */
+/* ---------- paleta de acentos reutilizable (icono/tarjetas/imágenes) ---------- */
+const COLORES = {
+  teal:   { c1:'var(--c-teal-1)',   c2:'var(--c-teal-2)',   tinte:'var(--c-teal-t)',   solido:'var(--c-teal-1)' },
+  azul:   { c1:'var(--c-azul-1)',   c2:'var(--c-azul-2)',   tinte:'var(--c-azul-t)',   solido:'var(--c-azul-1)' },
+  morado: { c1:'var(--c-morado-1)', c2:'var(--c-morado-2)', tinte:'var(--c-morado-t)', solido:'var(--c-morado-1)' },
+  ambar:  { c1:'var(--c-ambar-1)',  c2:'var(--c-ambar-2)',  tinte:'var(--c-ambar-t)',  solido:'var(--c-ambar-1)' },
+  rosa:   { c1:'var(--c-rosa-1)',   c2:'var(--c-rosa-2)',   tinte:'var(--c-rosa-t)',   solido:'var(--c-rosa-1)' },
+  verde:  { c1:'var(--c-verde-1)',  c2:'var(--c-verde-2)',  tinte:'var(--c-verde-t)',  solido:'var(--c-verde-1)' }
+};
+function gradiente(color){ const c = COLORES[color] || COLORES.teal; return `linear-gradient(135deg, ${c.c1}, ${c.c2})`; }
+function tinteIcono(color){ const c = COLORES[color] || COLORES.teal; return `background:${c.tinte};color:${c.solido};`; }
+
+/* ---------- badge genérico arriba de un título de sección ---------- */
+function renderBadge(prefix, cfg){
+  if(!cfg) return;
+  const wrap = document.getElementById(prefix+'-badge'); if(!wrap) return;
+  const txt = document.getElementById(prefix+'-badge-texto');
+  const emo = document.getElementById(prefix+'-badge-emoji');
+  if(txt) txt.textContent = cfg.texto;
+  if(emo) emo.textContent = cfg.emoji || '';
+}
+
+const ICONOS = {
+  telas: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h11a2 2 0 0 1 2 2V19H4V5.5Z"/><path d="M9 5.5V19"/><path d="M14 5.5V19"/></svg>',
+  quimica: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s6.5 7.2 6.5 11.8a6.5 6.5 0 0 1-13 0C5.5 9.7 12 2.5 12 2.5Z"/></svg>',
+  proceso: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12.4l2 2 4-4.2"/></svg>',
+  seguridad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 5 5.2v6c0 5 3 8.4 7 9.3 4-.9 7-4.3 7-9.3v-6L12 2.5Z"/><path d="M9 12.2l2 2 4-4.4"/></svg>',
+  negocio: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M15 6h5v5"/></svg>',
+  graduacion: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/><path d="M22 8v6"/></svg>',
+  persona: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2"/></svg>',
+  estrella: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8L12 3.5Z"/></svg>',
+  megafono: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h2l4 4V5L6 9H4a1 1 0 0 0-1 1Z"/><path d="M14 8.5a4 4 0 0 1 0 7"/><path d="M17 6a7.5 7.5 0 0 1 0 12"/></svg>'
+};
+
+/* ---------- ayudante: pone una foto real o deja el diseño de muestra ---------- */
+function ponFoto(elId, url){
+  const el = document.getElementById(elId);
+  if(!el || !url) return;
+  el.style.backgroundImage = `url('${url}')`;
+  el.style.backgroundSize = 'cover';
+  el.style.backgroundPosition = 'center';
+}
+function ponFotoEnCaja(cajaId, url){
+  const caja = document.getElementById(cajaId);
+  if(!caja || !url) return;
+  caja.innerHTML = `<img src="${url}" alt="">`;
+}
+
+/* ---------- enlaces: un solo link de Hotmart para todos los botones ---------- */
+function aplicarEnlaces(){
+  document.querySelectorAll('.btn-cta-enlace').forEach(b => b.href = ENLACES.hotmart);
+}
+
+/* ---------- nota de transferencia: el mismo texto en 3 lugares ---------- */
+function aplicarNotaTransferencia(){
+  document.querySelectorAll('.nota-transferencia').forEach(el => {
+    el.innerHTML = `📲 ${NOTA_TRANSFERENCIA}`;
+  });
+}
+
+/* ---------- video del hero ---------- */
+function renderVideo(){
+  const box = document.querySelector('#hero-media');
+  if(!box) return;
+
+  if(!VIDEO.url){
+    box.innerHTML = `
+      <img src="fotos/hero-principal.webp" alt="Portada Aprende y Emprende">
+    `;
+    return;
+  }
+
+  box.innerHTML = VIDEO.tipo === 'mp4'
+    ? `<video src="${VIDEO.url}" controls playsinline></video>`
+    : `<iframe src="${VIDEO.url}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+}
+
+/* ---------- BANNER DE OFERTA ---------- */
+function renderPromo(){
+  const banner = document.getElementById('banner-promo'); if(!banner) return;
+  if(!PROMO.activo || !PROMO.texto){ banner.style.display = 'none'; return; }
+  document.getElementById('banner-promo-texto').innerHTML = PROMO.texto;
+}
+
+/* ---------- SECCIÓN 1: HERO ---------- */
+function renderHero(){
+  const t = document.getElementById('hero-titulo'); if(!t) return;
+  t.innerHTML = HERO.titulo;
+  document.getElementById('hero-subtitulo').textContent = HERO.subtitulo;
+  document.getElementById('hero-precio-anterior').textContent = HERO.precioAnterior;
+  document.getElementById('hero-precio-actual').textContent = HERO.precioActual;
+  document.getElementById('hero-boton').textContent = HERO.textoBoton;
+  document.getElementById('hero-micro').textContent = HERO.microBeneficios;
+}
+
+/* ---------- SECCIÓN 2: RESULTADO + comparador antes/después ---------- */
+function renderResultado(){
+  const t = document.getElementById('resultado-titulo'); if(!t) return;
+  t.textContent = RESULTADO.titulo;
+  document.getElementById('resultado-subtitulo').textContent = RESULTADO.subtitulo;
+  document.getElementById('resultado-sello').textContent = RESULTADO.sello;
+  ponFoto('comp-antes', IMAGENES.fotoAntesTapiceria);
+  ponFoto('comp-despues', IMAGENES.fotoDespuesTapiceria);
+}
+
+/* ---------- SECCIÓN 3: LOGROS (con íconos) ---------- */
+function renderLogros(){
+  const cont = document.getElementById('logros-grid'); if(!cont) return;
+  renderBadge('logros', LOGROS.badge);
+  document.getElementById('logros-titulo').textContent = LOGROS.titulo;
+  document.getElementById('logros-subtitulo').textContent = LOGROS.subtitulo;
+  cont.innerHTML = LOGROS.tarjetas.map(t => `
+    <div class="glass logro reveal">
+      <div class="card-visual" style="${t.imagen ? '' : `background:${gradiente(t.color)};`}">
+        ${t.imagen
+          ? `<img src="${t.imagen}" alt="${t.titulo}">`
+          : `<div class="icono-grande"><div class="caja">${ICONOS[t.icono] || ''}</div></div>`}
+      </div>
+      <div class="card-body">
+        <h3>${t.titulo}</h3>
+        <p>${t.texto}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ---------- SECCIÓN 4: MIRA ALGUNAS PÁGINAS (carrusel automático) ---------- */
+function renderPaginas(){
+  const track = document.getElementById('paginas-track'); if(!track) return;
+  renderBadge('paginas', PAGINAS.badge);
+  document.getElementById('paginas-titulo').textContent = PAGINAS.titulo;
+  document.getElementById('paginas-subtitulo').textContent = PAGINAS.subtitulo;
+  document.getElementById('paginas-frase').textContent = PAGINAS.fraseCierre;
+  document.getElementById('paginas-boton').textContent = PAGINAS.textoBoton;
+
+  // si no hay imágenes reales, generamos 6 tarjetas de muestra numeradas
+  const items = (PAGINAS.imagenes && PAGINAS.imagenes.length)
+    ? PAGINAS.imagenes
+    : Array.from({length:6}, (_,i)=> null);
+
+  // duplicamos la lista para que el desplazamiento se vea continuo (loop infinito)
+  const dobles = items.concat(items);
+
+  track.innerHTML = dobles.map((src,i)=>{
+    if(src){
+      return `<div class="pagina-card"><img src="${src}" alt="Página del manual"></div>`;
+    }
+    const num = (i % items.length) + 1;
+    return `
+      <div class="pagina-card">
+        <div class="pagina-placeholder">
+          <span class="num">${String(num).padStart(2,'0')}</span>
+          <span>Página de muestra —<br>agrega tus capturas en PAGINAS.imagenes</span>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+/* ---------- SECCIÓN 6: BONOS EXCLUSIVOS ---------- */
+function renderBonos(){
+  const cont = document.getElementById('bonos-grid'); if(!cont) return;
+  renderBadge('bonos', BONOS.badge);
+  document.getElementById('bonos-titulo').textContent = BONOS.titulo;
+  document.getElementById('bonos-subtitulo').textContent = BONOS.subtitulo;
+  cont.innerHTML = BONOS.tarjetas.map(b => `
+    <div class="glass bono-card reveal">
+      <div class="card-visual" style="${b.imagen ? '' : `background:${gradiente(b.color)};`}">
+        <span class="bono-numero">${b.numero}</span>
+        ${b.imagen
+          ? `<img src="${b.imagen}" alt="${b.titulo}">`
+          : `<div class="icono-grande"><div class="caja">${ICONOS[b.icono] || ''}</div></div>`}
+      </div>
+      <div class="card-body">
+        <h3>${b.titulo}</h3>
+        <p>${b.texto}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ---------- SECCIÓN 5: INCLUYE ---------- */
+function renderIncluye(){
+  const cont = document.getElementById('incluye-lista'); if(!cont) return;
+  renderBadge('incluye', INCLUYE.badge);
+  document.getElementById('incluye-titulo').textContent = INCLUYE.titulo;
+  cont.innerHTML = INCLUYE.items.map(i => `
+    <li class="reveal">
+      <div class="ico" style="${tinteIcono(i.color)}">${ICONOS[i.icono] || ''}</div>
+      <span class="txt"><b>${i.titulo}${i.proximamente ? '<span class="tag-proximamente">Próximamente</span>' : ''}</b><span>${i.texto}</span></span>
+    </li>
+  `).join('');
+}
+
+/* ---------- SECCIÓN 5: LOS 2 MANUALES ---------- */
+function renderManuales(){
+  const cont = document.getElementById('manuales-grid'); if(!cont) return;
+  renderBadge('manuales', MANUALES.badge);
+  document.getElementById('manuales-titulo').innerHTML = MANUALES.titulo;
+  document.getElementById('manuales-subtitulo1').textContent = MANUALES.subtitulo1;
+  document.getElementById('manuales-subtitulo2').textContent = MANUALES.subtitulo2;
+  cont.innerHTML = MANUALES.tarjetas.map(m => `
+    <div class="glass manual-card reveal">
+      <div class="manual-top">
+        <div class="manual-cover">
+          ${m.imagenPortada
+            ? `<img src="${m.imagenPortada}" alt="${m.coverTitulo}">`
+            : `<span class="cov-label">${m.coverEyebrow}</span>
+               <span class="cov-titulo">${m.coverTitulo}</span>
+               <div class="cov-icono">${ICONOS[m.coverIcono] || ''}</div>`}
+        </div>
+        <div class="manual-info">
+          <div class="numero">${m.numero}</div>
+          <span class="tag">${m.tag}</span>
+          <h3>${m.titulo}</h3>
+          <p>${m.texto}</p>
+        </div>
+      </div>
+      <div class="manual-divisor"></div>
+      <div class="manual-footer">
+        ${m.destacados.map(d => `
+          <div class="manual-foot-item">
+            <div class="ico" style="${tinteIcono(d.color)}">${ICONOS[d.icono] || ''}</div>
+            <span>${d.texto}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ---------- SECCIÓN 6: SOBRE MÍ ---------- */
+function renderSobreMi(){
+  const t = document.getElementById('sobremi-titulo'); if(!t) return;
+  renderBadge('sobremi', SOBRE_MI.badge);
+  t.textContent = SOBRE_MI.titulo;
+  document.getElementById('sobremi-parrafos').innerHTML =
+    SOBRE_MI.parrafos.map(p => `<p>${p}</p>`).join('');
+  ponFotoEnCaja('foto-autor-box', IMAGENES.fotoAutor);
+  ponFotoEnCaja('foto-servicio-box', IMAGENES.fotoAplicandoServicio);
+}
+
+/* ---------- iniciales para el avatar de la tarjeta "clasica" ---------- */
+function iniciales(nombre){
+  return nombre.split(' ').filter(Boolean).slice(0,2).map(p=>p[0].toUpperCase()).join('');
+}
+const SVG_ESTRELLA = '<svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8L12 3.5Z"/></svg>';
+const SVG_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+
+/* ---------- SECCIÓN 7: TESTIMONIOS (4 diseños distintos: clasica / whatsapp / estrellas / destacada) ---------- */
+function renderTestimonios(){
+  const cont = document.getElementById('testimonios-grid'); if(!cont) return;
+  renderBadge('testimonios', TESTIMONIOS.badge);
+  document.getElementById('testimonios-titulo-texto').textContent = TESTIMONIOS.titulo;
+
+  cont.innerHTML = TESTIMONIOS.tarjetas.map(t => {
+    const autor = `<p class="autor">${t.nombre} <span>· ${t.rol}</span></p>`;
+
+    if(t.tipo === 'whatsapp'){
+      return `
+        <div class="glass test-card test-whatsapp reveal">
+          <div class="encabezado">
+            <div class="ico-wa">💬</div>
+            <span>MENSAJE POR WHATSAPP</span>
+          </div>
+          <p class="quote">${t.texto}</p>
+          ${autor}
+        </div>`;
+    }
+    if(t.tipo === 'estrellas'){
+      return `
+        <div class="glass test-card test-estrellas reveal">
+          <div class="estrellas">${SVG_ESTRELLA.repeat(5)}</div>
+          <p class="quote">"${t.texto}"</p>
+          ${autor}
+        </div>`;
+    }
+    if(t.tipo === 'destacada'){
+      return `
+        <div class="glass test-card test-destacada reveal">
+          <div class="verificado">${SVG_CHECK} Verificado</div>
+          <p class="quote">"${t.texto}"</p>
+          ${autor}
+        </div>`;
+    }
+    // clasica (default)
+    const t2 = COLORES[t.color] || COLORES.teal;
+    return `
+      <div class="glass test-card test-clasica reveal">
+        <span class="comilla-fondo" aria-hidden="true">&rdquo;</span>
+        <div class="fila-autor">
+          <div class="avatar" style="background:linear-gradient(135deg, ${t2.c1}, ${t2.c2});">${iniciales(t.nombre)}</div>
+          <div>${autor}</div>
+        </div>
+        <p class="quote">"${t.texto}"</p>
+      </div>`;
+  }).join('');
+}
+
+/* ---------- SECCIÓN 8: PRECIO ---------- */
+function renderPrecio(){
+  const t = document.getElementById('precio-titulo'); if(!t) return;
+  renderBadge('precio', PRECIO.badge);
+  t.textContent = PRECIO.titulo;
+  document.getElementById('precio-subtitulo').textContent = PRECIO.subtitulo;
+  document.getElementById('precio-anterior').textContent = PRECIO.anterior;
+  document.getElementById('precio-actual').textContent = PRECIO.actual;
+  document.getElementById('precio-usd').textContent = PRECIO.usd;
+  document.getElementById('precio-nota-moneda').textContent = PRECIO.notaMoneda;
+  document.getElementById('precio-boton').textContent = PRECIO.textoBoton;
+  document.getElementById('precio-garantia').textContent = PRECIO.garantiaTexto;
+}
+
+/* ---------- SECCIÓN 9: FAQ ---------- */
+function renderFAQ(){
+  const cont = document.getElementById('faq-lista'); if(!cont) return;
+  renderBadge('faq', FAQ.badge);
+  document.getElementById('faq-titulo').textContent = FAQ.titulo;
+  cont.innerHTML = FAQ.preguntas.map(f => `
+    <div class="faq-item reveal" data-faq>
+      <div class="faq-q"><h3>${f.p}</h3><span class="mas">+</span></div>
+      <div class="faq-a"><p>${f.r}</p></div>
+    </div>
+  `).join('');
+  bindFAQ();
+}
+function bindFAQ(){
+  document.querySelectorAll('[data-faq]').forEach(item=>{
+    const head = item.querySelector('.faq-q');
+    const body = item.querySelector('.faq-a');
+    head.addEventListener('click', ()=>{
+      const abierto = item.classList.contains('open');
+      document.querySelectorAll('[data-faq]').forEach(o=>{ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null; });
+      if(!abierto){ item.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+    });
+  });
+}
+
+/* ---------- comparador antes/después (arrastrable) ---------- */
+function initComparador(){
+  document.querySelectorAll('.comparador').forEach(el=>{
+    const handle = el.querySelector('.comp-handle');
+    function setPos(clientX){
+      const r = el.getBoundingClientRect();
+      let pct = ((clientX-r.left)/r.width)*100;
+      pct = Math.max(0,Math.min(100,pct));
+      el.style.setProperty('--pos', pct+'%');
+    }
+    let arrastrando = false;
+    handle.addEventListener('pointerdown', e=>{ arrastrando=true; handle.setPointerCapture(e.pointerId); });
+    window.addEventListener('pointerup', ()=> arrastrando=false);
+    el.addEventListener('pointermove', e=>{ if(arrastrando) setPos(e.clientX); });
+    el.addEventListener('click', e=>{ if(!e.target.closest('.comp-handle')) setPos(e.clientX); });
+  });
+}
+
+/* ---------- aparición al hacer scroll ---------- */
+function initReveal(){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+
+/* ---------- CTA flotante: aparece después del hero ---------- */
+function initStickyCTA(){
+  const sticky = document.getElementById('sticky-cta');
+  const hero = document.getElementById('sec-hero');
+  if(!sticky || !hero) return;
+  window.addEventListener('scroll', ()=>{
+    sticky.classList.toggle('show', hero.getBoundingClientRect().bottom < 0);
+  }, {passive:true});
+}
+
+/* ---------- arranque ---------- */
+renderPromo();
+renderHero();
+renderResultado();
+renderLogros();
+renderPaginas();
+renderIncluye();
+renderBonos();
+renderManuales();
+renderSobreMi();
+renderTestimonios();
+renderPrecio();
+renderFAQ();
+aplicarEnlaces();
+aplicarNotaTransferencia();
+renderVideo();
+initComparador();
+initReveal();
+initStickyCTA();
+document.getElementById('sticky-boton') && (document.getElementById('sticky-boton').textContent = 'Comprar ahora — ' + HERO.precioActual);
+</script>
+<a
+href="https://wa.me/5219997066968?text=Hola,%20me%20interesa%20el%20pack%20de%20manuales%20de%20limpieza%20de%20tapicer%C3%ADas.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+class="btn-whatsapp"
+target="_blank">
+
+💬
+
+</a></body>
+</html>

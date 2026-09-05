@@ -396,6 +396,51 @@ section{padding:3.6rem 0;}
 footer{padding:3rem 0 7rem;border-top:1px solid var(--borde);text-align:center;background:var(--gris-claro);}
 footer .flogo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;margin-bottom:.7rem;text-transform:uppercase;color:var(--oscuro);}
 footer p{color:var(--gris-texto);font-size:.74rem;}
+/* ===== Barra promo responsive ===== */
+@media (max-width:768px){
+  .banner-promo{
+    padding:.55rem .75rem;
+    font-size:.95rem;
+  }
+
+  .banner-promo .flama{
+    display:none;
+  }
+}
+.precio-antes{
+  position: relative;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 1.05em;
+  margin: 0 .45rem;
+  -webkit-text-stroke: .4px rgba(0,0,0,.35);
+  text-shadow:
+    0 1px 2px rgba(0,0,0,.35),
+    0 0 4px rgba(0,0,0,.15);
+}
+
+.precio-antes::after{
+  content:"";
+  position:absolute;
+  left:-2px;
+  right:-2px;
+  top:50%;
+  height:1.2px;
+  background:#FF2D2D;
+  transform:rotate(-12deg);
+  border-radius:2px;
+}
+
+.precio-ahora{
+  display:inline-block;
+  margin-left:.35rem;
+  padding:.12rem .55rem;
+  background:#FFC800;
+  color:#0E2A32;
+  font-weight:900;
+  border-radius:8px;
+  box-shadow:0 2px 10px rgba(0,0,0,.25);
+}
 </style>
 </head>
 <body>
@@ -461,7 +506,7 @@ footer p{color:var(--gris-texto);font-size:.74rem;}
   // Ponlo en false para ocultar el banner por completo.
   const PROMO = {
     activo: true,
-    texto: 'Precio de lanzamiento por tiempo limitado — <strong>antes $699, ahora $260 MXN</strong>'
+texto: 'Precio de lanzamiento por tiempo limitado — <span class="precio-antes">$699</span> <span class="precio-ahora">$260 MXN</span>'
   };
 
   // =====================================================================

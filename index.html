@@ -396,15 +396,35 @@ section{padding:3.6rem 0;}
 footer{padding:3rem 0 7rem;border-top:1px solid var(--borde);text-align:center;background:var(--gris-claro);}
 footer .flogo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;margin-bottom:.7rem;text-transform:uppercase;color:var(--oscuro);}
 footer p{color:var(--gris-texto);font-size:.74rem;}
-/* ===== Barra promo responsive ===== */
+/* ===== Banner responsive ===== */
 @media (max-width:768px){
+
   .banner-promo{
-    padding:.55rem .75rem;
-    font-size:.95rem;
+    position: relative;
+    padding: .55rem 2.5rem;
+    font-size: .82rem;
+    line-height: 1.15;
+    text-align: center;
   }
 
-  .banner-promo .flama{
-    display:none;
+  .banner-promo #banner-promo-texto{
+    display: block;
+  }
+
+  .banner-promo .icono-fuego{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.35rem;
+    pointer-events: none;
+  }
+
+  .banner-promo .icono-fuego:first-of-type{
+    left: 8px;
+  }
+
+  .banner-promo .icono-fuego:last-of-type{
+    right: 8px;
   }
 }
 .precio-antes{
